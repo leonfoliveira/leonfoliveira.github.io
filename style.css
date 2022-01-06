@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-size: 62.5%;
+  --c-primary: #8f3ec5;
+  --c-secondary: white;
+  --c-shadow: #888;
+  --c-dark: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Header */
+
+header nav {
+  max-width: 150rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  padding: 0 5rem;
+  color: var(--c-shadow);
+  font-weight: 600;
+}
+
+header nav h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  padding: 0 1.5rem;
+}
+
+header nav ul li.active {
+  color: var(--c-primary);
+  font-weight: 700;
+}
+
+/* Content */
+
+main .page {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+main .page .info {
+  display: flex;
+  margin-top: 5rem;
+  padding: 0 3rem;
+}
+
+main .page .info .left {
+  flex: 1;
+}
+
+main .page .info .left h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+main .page .info .left h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--c-shadow);
+}
+
+main .page .info .left article {
+  margin: 1rem 0 3rem;
+}
+
+main .page .info .left article p {
+  font-weight: 500;
+  color: var(--c-shadow);
+  line-height: 150%;
+}
+
+main .page .info .left a {
+  border: none;
+  padding: 1rem 2rem;
+  background-color: var(--c-primary);
+  color: var(--c-secondary);
+  font-weight: 500;
+  transition: filter 100ms;
+}
+
+main .page .info .left a:hover {
+  filter: brightness(0.9);
+}
+
+main .page .info .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 0 2.5rem;
+}
+
+main .page .info .right .image {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background-size: contain;
+  z-index: 2;
+}
+
+main .page section {
+  margin-top: 5rem;
+}
+
+main .page section h3 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+main .page section h4 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--c-shadow);
+}
+
+main .page section p {
+  margin-top: 2rem;
+  text-align: justify;
+  color: var(--c-shadow);
+}
+
+main .page #skills .view {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  column-gap: 10rem;
+}
+
+main .page #skills .view .block {
+  display: flex;
+  column-gap: 2rem;
+}
+
+main .page #skills .view .block .icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+main .page #skills .view .block .icons i {
+  font-size: 5rem;
+}
+
+main .page #skills .view .block ul {
+  list-style: none;
+}
+
+main .page #skills .view .block ul li {
+  line-height: 150%;
+  color: var(--c-shadow);
+  font-weight: 500;
+}
+
+main .page #experience .view {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+main .page #experience .view .timeline {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+main .page #experience .view .timeline.left {
+  padding-right: 2.5rem;
+  border-right: 0.2rem solid var(--c-primary);
+}
+
+main .page #experience .view .timeline.right {
+  padding-left: 2.5rem;
+}
+
+main .page #experience .view .timeline.left * {
+  text-align: right;
+}
+
+main .page #experience .view .timeline .entry {
+  position: relative;
+}
+
+main .page #experience .view .timeline .entry::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--c-primary);
+}
+
+main .page #experience .view .timeline.left .entry::after {
+  right: -3.5rem;
+}
+
+main .page #experience .view .timeline.right .entry::after {
+  left: -3.5rem;
+}
+
+main .page #experience .view .timeline p {
+  margin: 0;
+  line-height: 150%;
+}
+
+main .page #experience .view .timeline .date {
+  font-size: 1.5rem;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 5rem;
+  background-color: var(--c-dark);
+  color: white;
+}
+
+footer .contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 3rem;
+  max-width: 100rem;
+  margin: auto;
+  padding: 3rem 0 2rem;
+}
+
+footer .contact .item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+footer .contact .item .icon {
+  font-size: 2.5rem;
+}
+
+footer .contact .item h5 {
+  font-weight: 700;
+}
+
+footer .contact .content a {
+  transition: color 100ms;
+}
+
+footer .contact .content a:hover {
+  color: var(--c-primary);
+}
+
+footer .copyright {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: var(--c-shadow);
+}
